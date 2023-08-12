@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lambdas And Streams">
+    <test name="Streams Test">
+        <groups>
+            <run>
+                <include name="stream"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="MindLStreamsCourse"></package>
+        </packages>
+    </test>
+</suite>
