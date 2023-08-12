@@ -47,7 +47,7 @@ public class StreamsConcat {
         //Concat Lists using streams
 
         List<String> la = new ArrayList<String>(Arrays.asList("1 2 3 4 5".split(" ")));
-        System.out.println("la: " + la);
+        System.out.println("\nla: " + la);
 
         List<String> lb = new ArrayList<String>(Arrays.asList("90 7 3 4 5".split(" ")));
         System.out.println("lb: " + lb);
@@ -79,5 +79,22 @@ public class StreamsConcat {
                 .collect(Collectors.toList());
 
         System.out.println("\nPeople after: "+people);
+    }
+
+    @Test(groups = "stream")
+    public void concatArraysUsingStreams(){
+        String a[] = {"yu","jiki"};
+        String b[] = {"poly"};
+
+        System.out.print("\nA: ");
+        Arrays.asList(a).forEach(x-> System.out.print(x+" "));
+
+        System.out.print("\nB: ");
+        Arrays.asList(b).forEach(x-> System.out.print(x+" "));
+
+        String[] c = Stream.concat(Stream.of(a),Stream.of(b)).toArray(x -> new String[x]);
+
+        System.out.print("\nC: ");
+        Arrays.asList(c).forEach(x-> System.out.print(x+" "));
     }
 }
